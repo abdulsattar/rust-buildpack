@@ -1,0 +1,5 @@
+mkdir -p "$1" "$2"
+build=$(cd "$1/" && pwd)
+cache=$(cd "$2/" && pwd)
+curl -s http://www.rust-lang.org/rustup.sh | sh
+cargo build
